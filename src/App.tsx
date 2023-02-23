@@ -4,6 +4,7 @@ import "./App.css";
 import { NavBar } from "./components/library/visual/NavBar";
 import MainPage from "./subpages/MainPage/MainPage";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/library/visual/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage/>}/>
       </Routes>
+      <Footer title={"Group 3 @ Cph Business Lyngby - Web Development"}/>
     </>
   );
 }
