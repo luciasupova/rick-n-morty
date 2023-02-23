@@ -12,14 +12,14 @@ export const NavBar = ({title1, title2, title3 }: NavBarProps) => (
   <header>
     <div className="wrapper">
       <div>
-        <img src="./src/assets/ricknmorty_logo.png" alt="" />
+        <img src="./src/assets/ricknmorty_logo.png" alt="img" />
       </div>
       <div>
         <NavLink to="/MainPage">{title1}</NavLink>
         <NavLink to="/MainPage">{title2}</NavLink>
         <NavLink to="/MainPage">{title3}</NavLink>
       </div>
-      <div>Placeholder text</div>
+      <div></div>
     </div>
   </header>
 );

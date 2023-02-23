@@ -1,34 +1,36 @@
 .wrapper {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: lightgray; /* add this line */
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-  
-  img {
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  h1 {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 1;
-    margin: 6px 0 6px 10px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  button + button {
-    margin-left: 10px;
-  }
-  
-  .welcome {
-    color: #333;
-    font-size: 14px;
-    margin-right: 10px;
-  }
-  
+
+body {
+  padding-top: 60px;
+}
+
+img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+div > a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+div > a:hover {
+  background-color: #f2f2f2;
+}
+
