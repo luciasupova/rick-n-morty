@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import './NavBar.css';
+import "./NavBar.css";
 
 interface NavBarProps {
   title1: string;
@@ -15,9 +15,9 @@ export const NavBar = ({title1, title2, title3 }: NavBarProps) => (
         <img src="./src/assets/ricknmorty_logo.png" alt="" />
       </div>
       <div>
-        <NavLink to="/page1">{title1}</NavLink>
-        <NavLink to="/page2">{title2}</NavLink>
-        <NavLink to="/page3">{title3}</NavLink>
+        <NavLink to="/MainPage">{title1}</NavLink>
+        <NavLink to="/MainPage">{title2}</NavLink>
+        <NavLink to="/MainPage">{title3}</NavLink>
       </div>
       <div>Placeholder text</div>
     </div>
