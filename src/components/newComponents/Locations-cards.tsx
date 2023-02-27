@@ -40,39 +40,20 @@ const LOCATIONS_QUERY = gql`
 
 const LocationsCards = ({ initialPage = 1, pageSize = 8 }: LocationProps) => {
   const [page, setPage] = useState(initialPage);
-  const { loading, error, data, fetchMore } = useQuery<LocationData>(
-    LOCATIONS_QUERY,
-    {
-      variables: { page, pageSize },
-    }
-  );
+  const { loading, error, data } = useQuery<LocationData>(LOCATIONS_QUERY, {
+    variables: { page: page, pageSize: pageSize },
+  });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
   const locations = data?.locations?.results || [];
-  const totalCount = data?.locations?.info?.count || 0;
 
   const handleShowMore = () => {
-    fetchMore({
-      variables: {
-        page: page + 1,
-        pageSize,
-      },
-      updateQuery: (prev, { fetchMoreResult }) => {
-        if (!fetchMoreResult) return prev;
-        return {
-          locations: {
-            ...fetchMoreResult.locations,
-            results: [...prev.locations.results, ...fetchMoreResult.locations.results],
-          },
-        };
-      },
-    });
-    
-    // remove this line
-    // setPage(page + 1);
+    setPage(page + 1);
+    console.log(page);
   };
+    
 
   return (
     <>
@@ -85,7 +66,7 @@ const LocationsCards = ({ initialPage = 1, pageSize = 8 }: LocationProps) => {
           />
         ))}
       </div>
-      {totalCount > locations.length && (
+      {locations.length > pageSize && (
         <div className="showMoreButtonContainer">
           <button onClick={handleShowMore}>Load more</button>
         </div>
