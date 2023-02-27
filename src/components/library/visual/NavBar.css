@@ -12,12 +12,28 @@
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-img {
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo img {
   height: 40px;
   margin-right: 10px;
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
 }
 
 div > a {
@@ -26,11 +42,10 @@ div > a {
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
-  margin-right: 20px;
+  margin-left: 20px;
   border-radius: 5px;
 }
 
 div > a:hover {
   background-color: #f2f2f2;
 }
-

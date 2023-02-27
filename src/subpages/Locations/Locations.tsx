@@ -1,8 +1,8 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import Characters from "../../components/newComponents/Characters";
 import ricknmortypng from "../../assets/ricknmorty_biglogo.png";
+import LocationsCards from "../../components/newComponents/Locations-cards";
 
-const MainPage = () => {
+const Locations = () => {
   const client = new ApolloClient({
     uri: "https://rickandmortyapi.com/graphql",
     cache: new InMemoryCache(),
@@ -23,14 +23,13 @@ const MainPage = () => {
         }}
       />
       <ApolloProvider client={client}>
-        <Characters />
-        
+        <LocationsCards />
       </ApolloProvider>
     </section>
   );
 };
 
-export default MainPage;
+export default Locations;
 
 /*            <img src="./src/assets/ricknmorty_biglogo.png" alt="biglogo" style={{ width: "600px", height: "200px" }}/>
             <Card title={"Rick"} subtitle={"awesome"}/>
