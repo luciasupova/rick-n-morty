@@ -6,6 +6,7 @@ import MainPage from "./subpages/MainPage/MainPage";
 import Footer from "./components/library/visual/Footer";
 import { Route, Routes } from "react-router-dom";
 import Locations from "./subpages/Locations/Locations";
+import Episodes from "./subpages/Episodes/Episodes";
 
 const App = () => {
   const client = new ApolloClient({
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/" element={<MainPage />} />
       <Route path="/MainPage" element={<MainPage/>} />
       <Route path="/Locations" element={<Locations/>} />
+      <Route path="/Episodes" element={<Episodes/>} />
       </Routes>      
       <Footer title={"Group 3 @ Cph Business Lyngby - Web Development"} />
     </>
