@@ -1,40 +1,30 @@
-import React from "react";
-import { motion } from "framer-motion"
-import ListCSS from './List.module.css'
+import React from 'react';
+import { motion } from 'framer-motion';
+import './List.module.css';
 
-export const List = () => {
-  
-   let ObjectList =[
-    {
-      specie: 'Human',
-      type: 'Unknown',
-      gender: 'Male',
-      origin: 'Earth (C-137)',
-      location: 'Earth (Replacement Dimension)'
-  }
-   ];
-    
-      let lists: unknown = [];
+type ListItem = {
+  label: string;
+  value: string;
+};
 
-      ObjectList.forEach((item, index) => {
-        lists.push(
+type ListProps = {
+  items: ListItem[];
+};
 
-          <div className={ListCSS.default} key={index}>
-            <motion.ul whileHover={{ scale: 1.2,}}>
-              <motion.li whileHover={{ scale: 1.2, backgroundColor: ['rgb(255,255,255)','rgba(245, 245, 245)', 'rgb(245, 245, 245)'] }}>
-              <label> Specie:</label> <p>{item.specie}</p> </motion.li>
-              <motion.li whileHover={{ scale: 1.2, backgroundColor: ['rgb(255,255,255)','rgba(245, 245, 245)', 'rgb(245, 245, 245)'] }}>
-              <label>Type:</label> <p>{item.type}</p> </motion.li>
-              <motion.li whileHover={{ scale: 1.2, backgroundColor: ['rgb(255,255,255)','rgba(245, 245, 245)', 'rgb(245, 245, 245)'] }}>
-              <label> Gender:</label>  <p>{item.gender}</p></motion.li> 
-              <motion.li whileHover={{ scale: 1.2, backgroundColor: ['rgb(255,255,255)','rgba(245, 245, 245)', 'rgb(245, 245, 245)'] }}>
-              <label> Origin:</label>  <p>{item.origin}</p></motion.li> 
-              <motion.li whileHover={{ scale: 1.2, backgroundColor: ['rgb(255,255,255)','rgba(245, 245, 245)', 'rgb(245, 245, 245)'] }}>
-              <label>Location:</label> <p>{item.location}</p></motion.li>
-            </motion.ul>
-          </div>
-        );
-      });
-  
-      return lists;
-    };
+const List = ({ items }: ListProps) => {
+  return (
+    <div className="listContainer">
+      <motion.ul>
+        {items.map((item, index) => (
+          <motion.li
+            key={index}
+          >
+            <label>{item.label}:</label> <p>{item.value}</p>
+          </motion.li>
+        ))}
+      </motion.ul>
+    </div>
+  );
+};
+
+export default List;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import logo from "../../../assets/ricknmorty_logo.png";
 
 interface NavBarProps {
   title1: string;
@@ -11,9 +12,9 @@ interface NavBarProps {
 export const NavBar = ({title1, title2, title3 }: NavBarProps) => (
   <header>
     <div className="wrapper">
-    <div className='logo'>
+      <div className='logo'>
         <NavLink to="/MainPage">
-          <img src="./src/assets/ricknmorty_logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </NavLink>
       </div>
       <div className='titles'>
@@ -25,4 +26,3 @@ export const NavBar = ({title1, title2, title3 }: NavBarProps) => (
     </div>
   </header>
 );
-

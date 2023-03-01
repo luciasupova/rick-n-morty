@@ -6,7 +6,6 @@ interface AvatarProps {
   isDead?: boolean;
 }
 
-
 export default function Avatar({
     image = "./src/assets/ricknmorty.png",
     isDead = false

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
 import Card from "../library/visual/Card";
 import "./Characters.css";
+import { Link } from "react-router-dom";
 type Character = {
   id: string;
   name: string;
@@ -57,14 +58,15 @@ const Characters = ({ initialPage = 1, pageSize = 8 }: CharactersProps) => {
   return (
     <>
       <div className="cardsContainer">
-        {characters.map((character) => (
-          <Card
-            key={character.id}
-            title={character.name}
-            subtitle={character.species + " id: " + character.id}
-            image={character.image}
-          />
-        ))}
+      {characters.map((character) => (
+       <Link to={`/characters/${character.id}`} key={character.id}>
+         <Card
+          title={character.name}
+          subtitle={character.species + " id: " + character.id}
+          image={character.image}
+        />
+      </Link>
+      ))}
       </div>
       {characters.length > pageSize && (
         <div className="showMoreButtonContainer">
