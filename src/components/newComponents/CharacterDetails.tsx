@@ -55,12 +55,12 @@ const CharacterDetails = () => {
     variables: { id },
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [data]);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
 
   const character = data?.character;
   
