@@ -1,9 +1,9 @@
 .cardsContainer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
 }
   
   .showMoreButtonContainer {

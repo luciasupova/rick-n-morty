@@ -3,16 +3,14 @@
     margin-left: 50px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
     justify-items: center;
     margin-bottom: 50px;
   }
   
-  
-  .showMoreButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  .paginationContainer{
+    display: flex;  
+    justify-content: center;  
     margin-bottom: 80px;
   }
-  
   

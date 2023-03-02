@@ -7,12 +7,9 @@
     margin-bottom: 50px;
   }
   
-  
-  .showMoreButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  .paginationContainer{
+    display: flex;  
+    justify-content: center;  
     margin-bottom: 80px;
   }
-  
   

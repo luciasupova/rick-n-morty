@@ -77,7 +77,7 @@ const CharacterDetails = () => {
       <List
         items={[
           { label: "Species", value: character?.species ?? "" },
-          { label: "Type", value: character?.type == "" ? "Unknown" : character?.type},
+          { label: "Type", value: character?.type ==null ? "undefined": "   " },
           { label: "Gender", value: character?.gender ?? "" },
           { label: "Origin", value: character?.origin?.name ?? "" },
           { label: "Location", value: character?.location?.name ?? "" },
