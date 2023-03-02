@@ -1,7 +1,7 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import Characters from "../../components/newComponents/Characters";
 import ricknmortypng from "../../assets/ricknmorty_biglogo.png";
-import "./MainPage.css"
+
 const MainPage = () => {
   const client = new ApolloClient({
     uri: "https://rickandmortyapi.com/graphql",
@@ -9,20 +9,8 @@ const MainPage = () => {
   });
 
   return (
-    <section className="MainPage-section">
-            <img
-        src={ricknmortypng}
-        className="ricknmortypng"
-        style={{
-          width: "25%",
-          height: "auto",
-          display: "block",
-          margin: "auto",
-          marginTop: "180px",
-          marginBottom: "20px",
-        }}
-        alt="Rick and Morty Logo"
-      />
+    <section className="MainPage-section" style={{zoom: 50}}>
+      
       <ApolloProvider client={client}>
         <Characters />
         

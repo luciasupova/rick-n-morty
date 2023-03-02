@@ -10,19 +10,7 @@ const MainPage = () => {
 
   return (
     <section className="MainPage-section">
-            <img
-        src={ricknmortypng}
-        className="ricknmortypng"
-        style={{
-          width: "25%",
-          height: "auto",
-          display: "block",
-          margin: "auto",
-          marginTop: "180px",
-          marginBottom: "20px",
-        }}
-        alt="Rick and Morty Logo"
-      />
+      
       <ApolloProvider client={client}>
         <Characters />
         

@@ -1,7 +1,3 @@
-html{
-  scroll-behavior: smooth;
-}
-
 .characterDetailsContainer {
     display: flex;
     flex-direction: column;

@@ -60,9 +60,9 @@ const CharacterDetails = () => {
   if (error) return <p>Error :(</p>;
 
   const character = data?.character;
-  window.scrollTo(0, 0);
+
   return (
-    
+    {window.scrollTo(0, 0)}
     <div className="characterDetailsContainer">
 {character?.status === "Dead" ? (
   <img src={character?.image} className="avatar" style={{filter: 'grayscale(100%)', position: 'relative'}}/>

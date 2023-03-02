@@ -18,7 +18,7 @@ const MainPage = () => {
           height: "auto",
           display: "block",
           margin: "auto",
-          marginTop: "180px",
+          marginTop: "160px",
           marginBottom: "20px",
         }}
         alt="Rick and Morty Logo"
