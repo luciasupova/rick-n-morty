@@ -10,6 +10,18 @@ const MainPage = () => {
 
   return (
     <section className="MainPage-section">
+      <img
+        src={ricknmortypng}
+        className="ricknmortypng"
+        style={{
+          width: "25%",
+          height: "auto",
+          display: "block",
+          margin: "auto",
+          marginTop: "80px",
+          marginBottom: "20px"
+        }}
+      />
       
       <ApolloProvider client={client}>
         <Characters />
