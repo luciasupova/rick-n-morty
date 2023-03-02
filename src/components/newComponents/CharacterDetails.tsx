@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import List from "../library/visual/List";
@@ -59,8 +58,12 @@ const CharacterDetails = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
+
   const character = data?.character;
-  window.scrollTo(0, 0);
+  
   return (
     
     <div className="characterDetailsContainer">
